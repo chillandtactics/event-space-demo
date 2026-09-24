@@ -112,7 +112,7 @@
       if (roomDescription) roomDescription.textContent = room.description;
       if (roomMood) roomMood.textContent = room.mood;
       if (roomIndex) roomIndex.textContent = room.index;
-      if (roomChoose) roomChoose.textContent = room.choose + ' ↗';
+      if (roomChoose) roomChoose.textContent = room.choose;
       $$('[data-room]').forEach((button) => {
         const selected = button.dataset.room === roomKey;
         button.setAttribute('aria-pressed', String(selected));
