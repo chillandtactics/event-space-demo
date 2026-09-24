@@ -2,12 +2,30 @@
 <html lang="ru" data-theme="light">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Концепция пространства для свадеб, корпоративов и частных праздников. Интерактивный демонстрационный сайт.">
+  <meta name="description" content="Свадьбы, корпоративы и частные праздники. Пространства, атмосфера и детали вашего события в интерактивной дизайн-концепции.">
   <meta name="robots" content="noindex,nofollow"><meta name="color-scheme" content="light dark">
   <title>Пространство для событий — дизайн-концепция</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Пространство для событий">
+  <meta property="og:title" content="Пространство для событий — дизайн-концепция">
+  <meta property="og:description" content="Свадьбы, корпоративы и частные праздники. Выберите пространство и настроение вашего события.">
+  <meta property="og:url" content="https://chillandtactics.github.io/event-space-demo/">
+  <meta property="og:image" content="https://chillandtactics.github.io/event-space-demo/assets/share-cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Пространство для событий. Вечерний зал с цветами и свечами. Дизайн-концепция.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Пространство для событий — дизайн-концепция">
+  <meta name="twitter:description" content="Свадьбы, корпоративы и частные праздники. Выберите пространство и настроение вашего события.">
+  <meta name="twitter:image" content="https://chillandtactics.github.io/event-space-demo/assets/share-cover.jpg">
+  <meta name="twitter:image:alt" content="Пространство для событий. Вечерний зал с цветами и свечами. Дизайн-концепция.">
+  <link rel="preload" href="assets/Manrope-variable.ttf" as="font" type="font/ttf" crossorigin>
   <script>try{let t=localStorage.getItem('event-space-theme');document.documentElement.dataset.theme=['light','dark','chocolate'].includes(t)?t:(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch{}</script>
-  <link rel="preload" href="assets/hero.jpg" as="image"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
+  <link rel="preload" href="assets/hero-wall.jpg" as="image" media="(min-width: 801px)"><link rel="preload" href="assets/hero-wall-mobile.jpg" as="image" media="(max-width: 800px)"><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Перейти к содержимому</a>
@@ -21,7 +39,7 @@
   </aside>
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero-photo" src="assets/hero.jpg" width="1800" height="1100" alt="Вечерний зал с высокими окнами, цветами и сервированными столами" fetchpriority="high">
+      <picture class="hero-backdrop"><source media="(max-width: 800px)" srcset="assets/hero-wall-mobile.jpg" width="1024" height="1536"><img class="hero-photo" src="assets/hero-wall.jpg" width="1735" height="907" alt="Тёплая подсветка стен, высокие окна и праздничный стол со свечами в вечернем зале" fetchpriority="high"></picture>
       <header class="site-header wrap">
         <a class="wordmark" href="#top" aria-label="Пространство для событий — начало страницы">Пространство<br> для событий<span class="wordmark-dot">.</span></a>
         <nav class="desktop-nav" aria-label="Главная навигация"><a href="#formats">Форматы</a><a href="#spaces">Пространства</a><a href="#atmosphere">Атмосфера</a><a href="#menu">Меню</a></nav>
@@ -29,23 +47,23 @@
         <button id="menu-toggle" class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Открыть меню">Меню <span aria-hidden="true">☰</span></button>
         <nav id="mobile-menu" class="mobile-menu" aria-label="Мобильная навигация" hidden><a href="#formats">Форматы</a><a href="#spaces">Пространства</a><a href="#atmosphere">Атмосфера</a><a href="#menu">Меню</a><a href="#inquiry">Обсудить событие</a></nav>
       </header>
-      <div class="hero-content wrap"><h1 id="hero-title">Место для ваших<br> особенных событий</h1><p>Свадьбы, корпоративы и частные праздники.<br> С вашим характером. В вашем ритме.</p><a class="button button-hero" href="#spaces">Подобрать пространство</a></div>
+      <div class="hero-content wrap"><h1 id="hero-title"><span class="hero-title-line">Место для ваших</span> <span class="hero-title-line">особенных<span class="hero-title-space"> </span><br class="hero-mobile-break">событий</span></h1><p>Свадьбы, корпоративы и частные праздники.<br> С вашим характером. В вашем ритме.</p><a class="button button-hero" href="#spaces">Подобрать пространство</a></div>
       <div class="hero-bottom wrap"><span>Красивые моменты начинаются с места</span><a href="#formats" aria-label="Перейти к форматам мероприятий">Листайте дальше <span aria-hidden="true">↓</span></a></div>
     </section>
 
     <section class="section wrap formats" id="formats" aria-labelledby="formats-title">
       <div class="section-heading" data-reveal><p class="eyebrow">Ваш повод</p><div class="heading-row"><h2 id="formats-title">У каждого события<br> своё настроение</h2><p class="section-intro">Тихое «да», громкие аплодисменты<br> или вечер в самом близком кругу.</p></div></div>
       <div class="format-grid" data-reveal>
-        <button class="format-card format-wedding" type="button" data-event-choice="wedding"><span class="image-frame"><img src="assets/terrace.jpg" alt="Цветочная арка для церемонии в саду" width="1800" height="1200" loading="lazy"><span class="image-action" aria-hidden="true">↗</span></span><span class="card-caption"><span>Свадьба</span><span class="caption-small">День только о вас</span></span></button>
-        <button class="format-card format-corporate" type="button" data-event-choice="corporate"><span class="image-frame"><img src="assets/loft.jpg" alt="Вечерний лофт для корпоративного ужина" width="1248" height="1600" loading="lazy"><span class="image-action" aria-hidden="true">↗</span></span><span class="card-caption"><span>Корпоратив</span><span class="caption-small">Вместе вне офиса</span></span></button>
-        <button class="format-card format-private" type="button" data-event-choice="private"><span class="image-frame"><img src="assets/details.jpg" alt="Белые цветы, свечи и хрустальные бокалы на праздничном столе" width="1248" height="1600" loading="lazy"><span class="image-action" aria-hidden="true">↗</span></span><span class="card-caption"><span>Частный праздник</span><span class="caption-small">Ваши люди рядом</span></span></button>
+        <button class="format-card format-wedding" type="button" data-event-choice="wedding" aria-label="Выбрать формат: Свадьба" aria-pressed="false"><span class="image-frame"><img src="assets/terrace-v2.jpg" alt="Цветочная арка для церемонии в саду" width="1536" height="1024" loading="lazy"></span><span class="card-caption"><span>Свадьба</span><span class="caption-small">День только о вас</span><span class="format-action" aria-hidden="true">Выбрать формат</span></span></button>
+        <button class="format-card format-corporate" type="button" data-event-choice="corporate" aria-label="Выбрать формат: Корпоратив" aria-pressed="false"><span class="image-frame"><img src="assets/loft-v2.jpg" alt="Вечерний лофт для корпоративного ужина" width="1448" height="1086" loading="lazy"></span><span class="card-caption"><span>Корпоратив</span><span class="caption-small">Вместе вне офиса</span><span class="format-action" aria-hidden="true">Выбрать формат</span></span></button>
+        <button class="format-card format-private" type="button" data-event-choice="private" aria-label="Выбрать формат: Частный праздник" aria-pressed="false"><span class="image-frame"><img src="assets/details-v2.jpg" alt="Белые цветы, свечи и хрустальные бокалы на праздничном столе" width="1448" height="1086" loading="lazy"></span><span class="card-caption"><span>Частный праздник</span><span class="caption-small">Ваши люди рядом</span><span class="format-action" aria-hidden="true">Выбрать формат</span></span></button>
       </div>
     </section>
 
     <section class="section spaces" id="spaces" aria-labelledby="spaces-title"><div class="wrap">
       <div class="heading-row spaces-heading" data-reveal><h2 id="spaces-title">Найдите своё<br> пространство</h2><p class="section-intro">Разные характеры.<br> Одно внимание к деталям.</p></div>
       <div class="space-layout" data-reveal>
-        <div class="room-photo-frame"><img id="room-photo" src="assets/hall.jpg" alt="Светлый зал" width="1800" height="1200" loading="lazy"></div>
+        <div class="room-photo-frame"><img id="room-photo" src="assets/hall-v2.jpg" alt="Светлый зал" width="1536" height="1024" loading="lazy"></div>
         <div class="room-info"><span class="room-index" id="room-index">01 / 03</span><div class="room-copy" aria-live="polite"><p class="room-mood" id="room-mood">Свет / воздух / свобода</p><h3 id="room-title">Светлый зал</h3><p id="room-description">Много естественного света, высокие окна и спокойная архитектура. Пространство, в котором легко представить вашу историю.</p></div><button class="button button-secondary" type="button" id="room-choose">Выбрать этот зал</button><div class="room-tabs" role="group" aria-label="Выберите пространство"><button type="button" data-room="light" aria-pressed="true">Светлый зал</button><button type="button" data-room="loft" aria-pressed="false">Лофт</button><button type="button" data-room="terrace" aria-pressed="false">Терраса</button></div></div>
       </div>
     </div></section>
@@ -53,12 +71,12 @@
     <section class="atmosphere section" id="atmosphere" aria-labelledby="atmosphere-title"><div class="wrap">
       <div class="atmosphere-heading" data-reveal><p class="eyebrow">Больше, чем интерьер</p><h2 id="atmosphere-title">Всё складывается<br> в ощущение</h2><p>Свет в бокалах. Живые цветы.<br> Разговоры, которые хочется продолжить.</p></div>
       <div class="gallery" data-reveal>
-        <button class="gallery-item gallery-wide" type="button" data-gallery-src="assets/evening.jpg" data-gallery-caption="Вечерний свет и пространство для встречи" aria-label="Открыть фотографию вечернего зала"><img src="assets/evening.jpg" alt="Мягкий вечерний свет в просторном зале" width="1800" height="1013" loading="lazy"><span class="gallery-label">Вечерний свет</span></button>
-        <button class="gallery-item gallery-narrow" type="button" data-gallery-src="assets/details.jpg" data-gallery-caption="Тактильные детали сервировки" aria-label="Открыть фотографию сервировки"><img src="assets/details.jpg" alt="Живые цветы и тонкие детали сервировки" width="1248" height="1600" loading="lazy"><span class="gallery-label">Красота в деталях</span></button>
+        <button class="gallery-item gallery-wide" type="button" data-gallery-group="atmosphere" data-gallery-src="assets/evening-v2.jpg" data-gallery-caption="Вечерний свет и пространство для встречи" aria-label="Открыть фотографию вечернего зала"><img src="assets/evening-v2.jpg" alt="Мягкий вечерний свет в просторном зале" width="1536" height="1024" loading="lazy"><span class="gallery-label">Вечерний свет</span></button>
+        <button class="gallery-item gallery-narrow" type="button" data-gallery-group="atmosphere" data-gallery-src="assets/details-v2.jpg" data-gallery-caption="Тактильные детали сервировки" aria-label="Открыть фотографию сервировки"><img src="assets/details-v2.jpg" alt="Живые цветы и тонкие детали сервировки" width="1448" height="1086" loading="lazy"><span class="gallery-label">Красота в деталях</span></button>
       </div>
     </div></section>
 
-    <section class="menu-section section wrap" id="menu" aria-labelledby="menu-title"><div class="menu-visual" data-reveal><img src="assets/cuisine.jpg" alt="Авторская подача блюда на фарфоровой тарелке" width="1600" height="1429" loading="lazy"><span class="photo-note">Вкус тоже создаёт воспоминания</span></div><div class="menu-copy" data-reveal><h2 id="menu-title">Вкус вашего<br> события</h2><p class="lead">От первого бокала<br> до последнего десерта.</p><p>Камерный ужин, праздничный банкет или лёгкий фуршет. Начните с настроения вечера, а детали меню обсудите вместе с командой.</p><div class="menu-lines"><span>Банкетное меню</span><span>Фуршет и welcome</span><span>Индивидуальные пожелания</span></div><a class="button button-secondary" href="#inquiry">Обсудить событие</a></div></section>
+    <section class="menu-section section wrap" id="menu" aria-labelledby="menu-title"><div class="menu-visual" data-reveal><button id="menu-photo-open" class="menu-main-photo" type="button" data-menu-photo-open aria-label="Открыть фото: тартар из лосося"><img id="menu-photo" src="assets/cuisine-v2.jpg" alt="Тартар из лосося" width="1536" height="1024" loading="lazy"><span class="menu-photo-overlay">Смотреть фото</span></button><div class="menu-thumbnails" role="group" aria-label="Фотографии блюд"><button class="menu-thumbnail" type="button" data-menu-photo="appetizer" data-gallery-group="menu" data-gallery-src="assets/cuisine-v2.jpg" data-gallery-caption="Тартар из лосося" data-gallery-alt="Тартар из лосося" aria-pressed="true"><img src="assets/cuisine-v2.jpg" alt="" width="1536" height="1024" loading="lazy"><span>Закуска</span></button><button class="menu-thumbnail" type="button" data-menu-photo="main" data-gallery-group="menu" data-gallery-src="assets/cuisine-main.jpg" data-gallery-caption="Утиная грудка с морковным пюре и сезонными овощами" data-gallery-alt="Утиная грудка с морковным пюре и сезонными овощами" aria-pressed="false"><img src="assets/cuisine-main.jpg" alt="" width="1536" height="1024" loading="lazy"><span>Горячее</span></button><button class="menu-thumbnail" type="button" data-menu-photo="dessert" data-gallery-group="menu" data-gallery-src="assets/cuisine-dessert.jpg" data-gallery-caption="Индивидуальная ягодная Павлова" data-gallery-alt="Индивидуальная ягодная Павлова" aria-pressed="false"><img src="assets/cuisine-dessert.jpg" alt="" width="1536" height="1024" loading="lazy"><span>Десерт</span></button></div><p id="menu-photo-status" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p><span class="photo-note">Вкус тоже создаёт воспоминания</span></div><div class="menu-copy" data-reveal><h2 id="menu-title">Вкус вашего<br> события</h2><p class="lead">От первого бокала<br> до последнего десерта.</p><p>Камерный ужин, праздничный банкет или лёгкий фуршет. Начните с настроения вечера, а детали меню обсудите вместе с командой.</p><div class="menu-lines"><span>Банкетное меню</span><span>Фуршет и welcome</span><span>Индивидуальные пожелания</span></div><a class="button button-secondary" href="#inquiry">Обсудить событие</a></div></section>
 
     <section class="process section" aria-labelledby="process-title"><div class="wrap"><div class="heading-row" data-reveal><h2 id="process-title">От первой идеи<br> до вашего вечера</h2><p class="section-intro">Понятные шаги, чтобы главное<br> оставалось в центре внимания.</p></div><ol class="process-grid" data-reveal><li><span class="step-number">01</span><h3>Расскажите о событии</h3><p>Повод, желаемая дата и сколько близких или коллег будет рядом.</p></li><li><span class="step-number">02</span><h3>Выберите пространство</h3><p>Посмотрите залы и обсудите атмосферу, рассадку и сценарий.</p></li><li><span class="step-number">03</span><h3>Соберите детали</h3><p>Меню, оформление и программа складываются в единый план.</p></li><li><span class="step-number">04</span><h3>Будьте в моменте</h3><p>Встречайте гостей, обнимайтесь, танцуйте. Этот вечер — ваш.</p></li></ol></div></section>
 
@@ -68,6 +86,6 @@
   </main>
   <footer class="footer wrap"><div class="footer-top"><a class="wordmark" href="#top">Пространство<br> для событий<span class="wordmark-dot">.</span></a><p>Место. Настроение.<br> Ваша история.</p><a id="back-top" class="text-link" href="#top">Наверх <span aria-hidden="true">↑</span></a></div><div class="footer-bottom"><span>Демонстрационная концепция сайта</span><span>Изображения иллюстрируют вымышленное пространство.</span><span>2026</span></div></footer>
   <a class="mobile-inquiry" href="#inquiry">Обсудить событие</a>
-  <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Фотографии пространства"><button id="gallery-close" class="gallery-close" type="button" aria-label="Закрыть фотографию">Закрыть ×</button><img id="gallery-image" src="assets/evening.jpg" alt=""><div class="gallery-controls"><button id="gallery-prev" type="button" aria-label="Предыдущая фотография">←</button><p id="gallery-caption"></p><button id="gallery-next" type="button" aria-label="Следующая фотография">→</button></div></dialog>
+  <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Фотографии пространства"><button id="gallery-close" class="gallery-close" type="button" aria-label="Закрыть фотографию">Закрыть ×</button><img id="gallery-image" src="assets/evening-v2.jpg" alt=""><div class="gallery-controls"><button id="gallery-prev" type="button" aria-label="Предыдущая фотография">←</button><p id="gallery-caption" aria-live="polite" aria-atomic="true"></p><button id="gallery-next" type="button" aria-label="Следующая фотография">→</button></div></dialog>
 </body>
 </html>
