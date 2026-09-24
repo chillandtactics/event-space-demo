@@ -46,9 +46,6 @@
 /* Audit refinements: readable captions, explicit selections and compact room composition. */
 .fields label,.form-disclosure{font-size:13px}
 .photo-note,.caption-small,.gallery-label{font-size:13px;line-height:1.6}
-.format-action{align-self:flex-start;margin-top:12px;padding-bottom:4px;border-bottom:1px solid var(--line);color:var(--accent);font-size:13px;font-weight:500;letter-spacing:0;line-height:1.6}
-.format-card:hover .format-action,.format-card[aria-pressed=true] .format-action{border-color:var(--accent)}
-.format-card[aria-pressed=true] .format-action{font-weight:700}
 .event-form{container-type:inline-size;min-width:0;scroll-margin-top:100px}
 @container(max-width:420px){.fields{grid-template-columns:1fr}}
 @media(min-width:801px){
@@ -146,3 +143,16 @@
   .menu-thumbnail span{padding-top:6px;font-size:12px}
   .menu-photo-overlay{right:9px;bottom:9px;padding:6px 8px;font-size:12px}
 }
+
+/* Room choice leads into the action: select a space first, then continue to the form. */
+.room-info .room-tabs{margin-top:26px;padding-top:0}
+.room-info>#room-choose{margin-top:24px}
+@media(max-width:800px){
+  .room-info{display:flex;flex-direction:column}
+  .room-info .room-tabs{width:100%;margin-top:22px}
+  .room-info>#room-choose{align-self:flex-start;margin-top:22px}
+}
+
+/* The formats intro reads as one left-aligned statement above the cards. */
+.formats .heading-row{display:block}
+.formats .heading-row .section-intro{max-width:560px;margin-top:20px;padding-bottom:0}
